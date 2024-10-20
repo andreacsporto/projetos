@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     {{livro.id}} - {{livro.nome}}
+
+    <form action="{%url 'update' livro.id %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="nome" value="{{livro.nome}}">  
+        <button type="submit">Update</button>      
+    </form>
+
+    
+</body>
+</html>
